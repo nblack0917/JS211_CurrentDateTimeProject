@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
   </head>
   <body>
     <h1>Hello World!</h1>
@@ -11,5 +11,29 @@
     <div id="display-element"></div>
     <button onclick="displayDate()">Click Me</button>
     <hr/>
+    <input type="number" id="num-one" placeholder="Enter a number 1-50">
+    <input type="number" id="num-two" placeholder="Enter a number 1-50">
+    <input type="text" id="num-three" placeholder="Enter a number 1-50">
+    <button id="submitButton">Submit Numbers</button>
+    <hr/>
+    <hr/>
+    <h3>Let's add the first two together</h3>
+    <button id="additionButton">Add</button>
+    <div id="addTotal"></div>
+    <br/>
+    <h3>Let's add the outer two numbers. But only if they are numbers</h3>
+    <button id="numberButton">Add</button>
+    <div id="numberTotal"></div>
+    <br/>
+    <h3>Let's add the outer two numbers. As long as ONE is a number.</h3>
+    <button id="truthButton">Add</button>
+    <div id="truthTotal"></div>
+    <br/>
+    <h3>Let's add the first two numbers. As long as they aren't something else</h3>
+    <button id="falseButton">Add</button>
+    <div id="falseTotal"></div>
+    <br/>
+
+
   </body>
 </html>
