@@ -3,36 +3,80 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <hr/>
-    <div id="display-element"></div>
-    <button onclick="displayDate()">Click Me</button>
-    <hr/>
-    <input type="number" id="num-one" placeholder="Enter a number 1-50">
-    <input type="number" id="num-two" placeholder="Enter a number 1-50">
-    <input type="text" id="num-three" placeholder="Enter a number 1-50">
-    <button id="submitButton">Submit Numbers</button>
-    <hr/>
-    <hr/>
-    <h3>Let's add the first two together</h3>
-    <button id="additionButton">Add</button>
-    <div id="addTotal"></div>
-    <br/>
-    <h3>Let's add the outer two numbers. But only if they are numbers</h3>
-    <button id="numberButton">Add</button>
-    <div id="numberTotal"></div>
-    <br/>
-    <h3>Let's add the outer two numbers. As long as ONE is a number.</h3>
-    <button id="truthButton">Add</button>
-    <div id="truthTotal"></div>
-    <br/>
-    <h3>Let's add the first two numbers. As long as they aren't something else</h3>
-    <button id="falseButton">Add</button>
-    <div id="falseTotal"></div>
-    <br/>
+    <div class="container">
+      <h1>Hello World!</h1>
+      <hr/>
+      <h3>What's the date and time?</h3>
+      <div id="display-element"></div>
+      <button onclick="displayDate()">Click Me</button>
+      <hr/>
+      <div class="convertSection">
+        <div class="convertBox">
+          <label for="numToString">Enter a Number</label>
+          <input type="number" name="numToString" id="numToString" placeholder="This is a Number Field">
+          <button id="toStringSubmit">Convert to a String</button>
+          <div id="toStringResults"></div>
+        </div>
+        <div class="convertBox">
+          <label for="stringToNum">Enter a Number</label>
+          <input type="text" name="stringToNum" id="stringToNum" placeholder="This is a Text Field">
+          <button id="toNumSubmit">Convert to a Number</button>
+          <div id="toNumResults"></div>
+        </div>
+      </div>
+      <hr/>
+      <hr/>
+      <div class="convertSection">
+        <div class="convertBox">
+          <label for="checkType">What type of input is it?</label>
+          <input type="text" name="checkType" id="check-type" placeholder="Enter input type here">
+          <button id=checkTypeSubmit>Check the Type</button>
+          <div id="typeResults"></div>
+        </div>
+      </div>
+      
+      <hr/>
+      <hr/>
+  
+      <label for="num-one">Number</label>
+        <input type="number" id="num-one" placeholder="Enter a number 1-50">
+      <label for="num-two">Number</label>
+        <input type="number" id="num-two" placeholder="Enter a number 1-50">
+      <label for="num-three">String</label>
+        <input type="text" id="num-three" placeholder="Enter a number 1-50">
+      <button id="submitButton">Submit Numbers</button>
+      <button id=resetButton>reset</button>
+      <hr/>
+      <hr/>
+      <div class="mathContainer">
+        <div class="mathQuestion" id="firstMath">
+          <h3>Let's add the first two together</h3>
+          <button id="additionButton">Add</button>
+          <div id="addTotal"></div>
+          
+        </div>
+        <div class="mathQuestion" id="secondMath">
+          <h3>Let's add the outer two numbers. But only if they are numbers</h3>
+          <button id="numberButton">Add</button>
+          <div id="numberTotal"></div>
+        </div>
+        <div class="mathQuestion" id="thirdMath">
+          <h3>Let's add the outer two numbers. As long as ONE is a number.</h3>
+          <button id="truthButton">Add</button>
+          <div id="truthTotal"></div>
+        </div>
+        <div class="mathQuestion" id="fourthMath">
+          <h3>Let's add the first two numbers. As long as they aren't a string or NaN</h3>
+          <button id="falseButton">Add</button>
+          <div id="falseTotal"></div>
+        </div>
+      </div>
+    </div>
+
 
 
   </body>
